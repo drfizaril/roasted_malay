@@ -1,0 +1,1014 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>ROASTED! Manual Rujukan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Konsep: satu lajur bacaan untuk meja makan. Hero ialah segi tiga api yang boleh diketuk, bahagian lain pendek dengan nav melekat. Tiga unsur memegang tiga warna tetap yang sama di seluruh halaman. */
+:root{
+  --font-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --font-body:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-mono:"DM Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+
+  --bg:#ECEEE5; --surface:#F5F6EF; --raise:#FFFFFF;
+  --ink:#1A1C17; --ink-soft:#4F5549; --line:#C5CABA;
+  --grill:rgba(26,28,23,.045);
+
+  --o:#7CC4EA; --h:#FF7A4D; --f:#F4B942; --on-fill:#14160F;
+  --o-ink:#0F628A; --h-ink:#B02D0C; --f-ink:#7A4F00;
+  --bbq:#8A4B2A; --on-bbq:#FFFFFF;
+
+  --ok-bg:#DAEAD6; --ok-ink:#1B6130;
+  --warn-bg:#F3E2BF; --warn-ink:#80500A;
+  --danger-bg:#F8D9CC; --danger-ink:#9B2608;
+
+  --band-bg:#1A1C17; --band-fg:#F5F6EF; --band-soft:#B9BEAF;
+  --focus:#0B62B8;
+  --head:96px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#131510; --surface:#1B1E18; --raise:#252921;
+    --ink:#ECEEE6; --ink-soft:#A8AEA0; --line:#3B4035;
+    --grill:rgba(255,255,255,.035);
+    --o-ink:#86CBEE; --h-ink:#FF8A5F; --f-ink:#F4B942;
+    --bbq:#D49A6A; --on-bbq:#1A1C17;
+    --ok-bg:#22382A; --ok-ink:#86D69A;
+    --warn-bg:#3B3120; --warn-ink:#F0B661;
+    --danger-bg:#46241A; --danger-ink:#FF9A78;
+    --band-bg:#0B0C09; --band-fg:#ECEEE6; --band-soft:#A8AEA0;
+    --focus:#8CC8F5;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#131510; --surface:#1B1E18; --raise:#252921;
+  --ink:#ECEEE6; --ink-soft:#A8AEA0; --line:#3B4035;
+  --grill:rgba(255,255,255,.035);
+  --o-ink:#86CBEE; --h-ink:#FF8A5F; --f-ink:#F4B942;
+  --bbq:#D49A6A; --on-bbq:#1A1C17;
+  --ok-bg:#22382A; --ok-ink:#86D69A;
+  --warn-bg:#3B3120; --warn-ink:#F0B661;
+  --danger-bg:#46241A; --danger-ink:#FF9A78;
+  --band-bg:#0B0C09; --band-fg:#ECEEE6; --band-soft:#A8AEA0;
+  --focus:#8CC8F5;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1rem;line-height:1.55;-webkit-text-size-adjust:100%}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0;padding:0}
+ul,ol{list-style:none}
+button,input{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+
+.wrap{width:100%;max-width:1120px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font:500 .75rem/1.4 var(--font-mono);text-transform:uppercase;letter-spacing:.12em;color:var(--ink-soft)}
+h2{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(2.3rem,7vw,3.7rem);line-height:.92;letter-spacing:.005em;text-wrap:balance}
+h3{font-size:1.05rem;line-height:1.3}
+.sub{max-width:62ch;color:var(--ink-soft);font-size:1.05rem}
+.sh{display:grid;gap:10px;max-width:64ch}
+.sec{padding-block:clamp(48px,8vw,88px)}
+.sec>.wrap{display:grid;gap:32px}
+main>section+section{border-top:2px solid var(--ink)}
+section[id]{scroll-margin-top:calc(var(--head) + env(safe-area-inset-top,0px))}
+
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--bg);padding:10px 14px;z-index:60;border-radius:4px}
+.skip:focus{left:max(16px,env(safe-area-inset-left,0px))}
+
+/* Header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:2px solid var(--ink)}
+.top-in{display:flex;flex-wrap:wrap;align-items:center;column-gap:12px;row-gap:6px;padding-block:8px}
+.brand{order:1;margin-right:auto;font:900 1.9rem/1 var(--font-display);letter-spacing:.03em;text-decoration:none}
+.brand span{color:var(--h-ink)}
+.theme{order:2;min-height:40px;padding:0 14px;border:2px solid var(--ink);background:transparent;border-radius:4px;font:600 .8rem var(--font-body);cursor:pointer}
+.theme:hover{background:var(--raise)}
+.nav{order:3;flex:1 1 100%;position:relative;display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:none;display:inline-flex;align-items:center;min-height:38px;padding:0 12px;border-radius:4px;text-decoration:none;font-weight:600;font-size:.9rem}
+.nav a:hover{background:var(--raise)}
+.nav a[aria-current="true"]{background:var(--ink);color:var(--bg)}
+@media (min-width:880px){
+  .nav{order:2;flex:0 1 auto;overflow:visible}
+  .theme{order:3}
+}
+
+/* Buttons and chips */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border:2px solid var(--ink);background:var(--ink);color:var(--bg);font:700 .95rem var(--font-body);border-radius:4px;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--h);color:var(--on-fill)}
+.btn.hot{background:var(--h);color:var(--on-fill)}
+.btn.hot:hover{background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--raise);color:var(--ink)}
+.btn.small{min-height:40px;padding:0 14px;font-size:.85rem}
+.chip{min-height:40px;padding:0 14px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:600 .875rem var(--font-body);border-radius:4px;cursor:pointer}
+.chip:hover{background:var(--raise)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* Hero */
+.hero{background-image:repeating-linear-gradient(0deg,transparent 0 22px,var(--grill) 22px 24px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(32px,6vw,72px)}
+.hero-copy{display:grid;gap:22px;min-width:0}
+h1{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(3.1rem,12vw,7.2rem);line-height:.86;letter-spacing:-.005em}
+h1 em{font-style:normal;color:var(--h-ink)}
+.lede{max-width:46ch;font-size:1.12rem}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.facts li{border:2px solid var(--ink);padding:6px 12px;border-radius:4px;font-size:.9rem;background:var(--surface)}
+.facts b{font-family:var(--font-mono);font-weight:500}
+@media (max-width:860px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Segi tiga api */
+.tri-wrap{display:grid;gap:14px;min-width:0}
+.tri{position:relative;width:100%;max-width:440px;margin-inline:auto;aspect-ratio:100/92}
+.tri svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.tri .fill{fill:url(#fireGrad);opacity:0;transition:opacity .3s}
+.tri.boom .fill{opacity:1}
+.edge{stroke:var(--line);stroke-width:1.6;stroke-linecap:round;fill:none;transition:stroke .25s}
+.edge.on{stroke:var(--h)}
+.node{position:absolute;transform:translate(-50%,-50%);width:clamp(80px,25vw,112px);padding:8px 6px;display:grid;justify-items:center;gap:2px;border:3px dashed var(--ink-soft);border-radius:8px;background:var(--raise);color:var(--ink-soft);cursor:pointer;text-align:center}
+.node .ltr{font:900 2.5rem/1 var(--font-display)}
+.node .nm{font:700 .7rem/1.15 var(--font-body);text-transform:uppercase;letter-spacing:.05em}
+.node[aria-pressed="true"]{border-style:solid;border-color:var(--ink);background:var(--c);color:var(--on-fill)}
+.node.o{--c:var(--o);left:12%;top:82.6%}
+.node.f{--c:var(--f);left:88%;top:82.6%}
+.node.h{--c:var(--h);left:50%;top:13%}
+.tri-c{position:absolute;left:50%;top:58%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;font:900 clamp(1.3rem,6.4vw,2.1rem)/1 var(--font-display);text-transform:uppercase;color:var(--ink-soft)}
+.tri.boom .tri-c{color:var(--on-fill)}
+.tri.jolt svg,.tri.jolt .tri-c{animation:jolt .5s ease-out 1}
+@keyframes jolt{0%{transform:translate(0,0) scale(1)}25%{transform:translate(-1.5%,0) scale(1.03)}55%{transform:translate(1.2%,0) scale(1.01)}100%{transform:translate(0,0) scale(1)}}
+.tri.jolt .tri-c{animation-name:joltc}
+@keyframes joltc{0%{transform:translate(-50%,-50%) scale(.8)}60%{transform:translate(-50%,-50%) scale(1.12)}100%{transform:translate(-50%,-50%) scale(1)}}
+.tri-msg{min-height:3.2em;text-align:center;font-size:.98rem;max-width:42ch;margin-inline:auto}
+.tri-msg.danger{color:var(--danger-ink);font-weight:700}
+.tri-note{text-align:center;font:400 .78rem/1.4 var(--font-mono);color:var(--ink-soft)}
+.tri-wrap .row{justify-content:center}
+
+/* Peraturan emas */
+.band{background:var(--band-bg);color:var(--band-fg)}
+.band .eyebrow{color:var(--band-soft)}
+.band-in{padding-block:clamp(40px,7vw,72px);display:grid;gap:22px}
+.eq{display:flex;flex-wrap:wrap;align-items:center;gap:10px clamp(8px,2vw,18px);font-size:clamp(2.4rem,9vw,5.4rem);line-height:1}
+.eq .b{display:inline-grid;place-items:center;width:1.25em;height:1.25em;border-radius:6px;color:var(--on-fill);font-size:.9em}
+.b.o{background:var(--o)} .b.h{background:var(--h)} .b.f{background:var(--f)}
+.eq .op{color:var(--band-soft)}
+.eq .boomword{color:var(--h)}
+.band-text{max-width:52ch;font-size:1.1rem}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:18px;padding-top:6px}
+.legend li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center}
+.legend .b{display:grid;place-items:center;width:54px;height:54px;border-radius:6px;font:900 1.9rem/1 var(--font-display);color:var(--on-fill)}
+.legend b{display:block;font-size:1.05rem}
+.legend span.d{display:block;color:var(--band-soft);font-size:.9rem}
+
+/* Penyediaan */
+.setup{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start}
+@media (max-width:900px){.setup{grid-template-columns:minmax(0,1fr)}}
+.col{display:grid;gap:16px;min-width:0}
+.meter{height:12px;border:2px solid var(--ink);border-radius:3px;background:var(--surface);overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--h);transition:width .25s}
+.meter-row{display:flex;justify-content:space-between;gap:12px;font:500 .8rem var(--font-mono);color:var(--ink-soft)}
+.check li{border-top:1px solid var(--line)}
+.check li:last-child{border-bottom:1px solid var(--line)}
+.check label{display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:12px;align-items:start;padding:14px 2px;cursor:pointer}
+.check input{appearance:none;-webkit-appearance:none;width:26px;height:26px;margin:0;border:2px solid var(--ink);border-radius:4px;background:var(--raise);display:grid;place-items:center;cursor:pointer}
+.check input:checked{background:var(--ink)}
+.check input:checked::after{content:"";width:12px;height:7px;border-left:3px solid var(--bg);border-bottom:3px solid var(--bg);transform:rotate(-45deg) translate(1px,-1px)}
+.check .n{font:500 .9rem/26px var(--font-mono);color:var(--ink-soft)}
+.check .t{min-width:0}
+.check input:checked ~ .t{color:var(--ink-soft)}
+.check b{font-weight:700}
+.done-msg{padding:12px 14px;border:2px solid currentColor;border-radius:4px;background:var(--ok-bg);color:var(--ok-ink);font-weight:700}
+.board{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,1fr);grid-template-rows:auto auto auto;gap:8px;padding:12px;border:2px solid var(--ink);background:var(--surface);border-radius:6px}
+.seat{display:grid;gap:2px;align-content:center;justify-items:center;text-align:center;padding:8px 4px;border:2px solid var(--ink);background:var(--raise);border-radius:4px;min-width:0}
+.seat b{font:900 1rem/1 var(--font-display);text-transform:uppercase;letter-spacing:.04em}
+.seat small{font-size:.7rem;line-height:1.25;color:var(--ink-soft)}
+.s1{grid-column:2;grid-row:1}.s2{grid-column:3;grid-row:2}.s3{grid-column:2;grid-row:3}.s4{grid-column:1;grid-row:2}
+.mid{grid-column:2;grid-row:2;display:grid;gap:8px;min-width:0}
+.deck{display:grid;gap:2px;justify-items:center;text-align:center;padding:10px 6px;background:var(--ink);color:var(--bg);border-radius:4px}
+.deck b{font:900 2rem/1 var(--font-display)}
+.deck small{font-size:.7rem;line-height:1.25;opacity:.85}
+.stall{display:grid;gap:6px;justify-items:center;padding:8px 6px;border:2px dashed var(--ink);border-radius:4px;text-align:center}
+.stall small{font:500 .65rem/1.25 var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
+.mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;width:100%}
+.mini i{display:grid;place-items:center;aspect-ratio:5/6;background:var(--bbq);color:var(--on-bbq);font:900 .95rem/1 var(--font-display);border-radius:3px;font-style:normal}
+.tbl-scroll{overflow-x:auto}
+.ledger{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.ledger th,.ledger td{padding:9px 6px;text-align:left;border-top:1px solid var(--line);font-size:.92rem}
+.ledger td:last-child,.ledger th:last-child{text-align:right;font-family:var(--font-mono)}
+.ledger tr.tot th,.ledger tr.tot td{border-top:2px solid var(--ink);font-weight:700}
+.ledger th{font-weight:500}
+
+/* Giliran */
+.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px;align-items:start}
+.panel{display:grid;gap:16px;padding:20px;border:2px solid var(--ink);background:var(--surface);border-radius:6px;min-width:0}
+.panel h3{font:900 1.5rem/1 var(--font-display);text-transform:uppercase;letter-spacing:.02em}
+.panel .hint{color:var(--ink-soft);font-size:.92rem}
+.turn{display:grid;gap:8px}
+.turn li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center;padding:12px;border:2px solid var(--line);border-radius:4px;background:var(--raise);color:var(--ink-soft)}
+.turn .num{display:grid;place-items:center;width:38px;height:38px;border:2px solid currentColor;border-radius:50%;font:900 1.2rem/1 var(--font-display)}
+.turn b{display:block;color:var(--ink)}
+.turn span.d{font-size:.88rem}
+.turn li[data-state="now"]{background:var(--h);border-color:var(--ink);color:var(--on-fill)}
+.turn li[data-state="now"] b{color:var(--on-fill)}
+.turn li[data-state="done"]{opacity:.6}
+.turn li[data-state="done"] .num{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.status{font-weight:600;min-height:1.6em}
+.hand{display:grid;gap:10px}
+.hand li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center}
+.hand .b{display:grid;place-items:center;width:44px;height:44px;border-radius:6px;font:900 1.5rem/1 var(--font-display);color:var(--on-fill)}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:44px;height:44px;border:2px solid var(--ink);background:var(--raise);border-radius:4px;font:700 1.3rem/1 var(--font-body);cursor:pointer}
+.stepper button:hover:not(:disabled){background:var(--ink);color:var(--bg)}
+.stepper button:disabled{opacity:.35;cursor:not-allowed}
+.stepper output{display:inline-block;min-width:2ch;text-align:center;font:500 1.5rem/1 var(--font-mono)}
+.verdict{padding:12px 14px;border:2px solid currentColor;border-radius:4px;font-weight:600;min-height:3.4em}
+.verdict.safe{background:var(--ok-bg);color:var(--ok-ink)}
+.verdict.warn{background:var(--warn-bg);color:var(--warn-ink)}
+.verdict.danger{background:var(--danger-bg);color:var(--danger-ink)}
+.players{display:grid;gap:8px}
+.players li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center}
+.players input{width:100%;min-width:0;min-height:44px;padding:0 12px;border:2px solid var(--ink);background:var(--raise);border-radius:4px;font-weight:600}
+.players li.out input{text-decoration:line-through;color:var(--ink-soft);background:transparent;border-style:dashed}
+.winner{padding:12px 14px;border:2px solid var(--ink);background:var(--f);color:var(--on-fill);border-radius:4px;font-weight:700}
+.copy-out{width:100%;min-height:150px;padding:12px;border:2px solid var(--ink);background:var(--raise);border-radius:4px;font:400 .85rem/1.5 var(--font-mono)}
+.copy-wrap{display:grid;gap:10px}
+
+/* Kad */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:14px}
+.kcard{display:grid;grid-template-columns:76px minmax(0,1fr);gap:14px;padding:14px;border:2px solid var(--ink);background:var(--surface);border-radius:6px}
+.face{width:76px;aspect-ratio:5/7;display:grid;place-items:center;border:2px solid var(--ink);border-radius:6px;background:var(--c);color:var(--on-c);font:900 2.1rem/1 var(--font-display);text-align:center}
+.face small{font:500 .6rem/1.2 var(--font-mono);text-transform:uppercase;letter-spacing:.05em;display:block;margin-top:4px}
+.kcard .info{display:grid;gap:6px;align-content:start;min-width:0}
+.kcard h3{font-size:1.1rem}
+.kcard .en{font:400 .75rem/1.3 var(--font-mono);color:var(--ink-soft)}
+.kcard p{font-size:.92rem;color:var(--ink-soft)}
+.kcard .qty{font:500 .8rem/1.3 var(--font-mono)}
+.c-o{--c:var(--o);--on-c:var(--on-fill)} .c-h{--c:var(--h);--on-c:var(--on-fill)} .c-f{--c:var(--f);--on-c:var(--on-fill)}
+.c-x{--c:var(--ink);--on-c:var(--bg)} .c-b{--c:var(--bbq);--on-c:var(--on-bbq)} .c-q{--c:var(--raise);--on-c:var(--ink)}
+.c-q .face{border-style:dashed}
+.tag{display:inline-block;justify-self:start;padding:2px 8px;border:1px solid currentColor;border-radius:3px;font:500 .68rem/1.5 var(--font-mono);text-transform:uppercase;letter-spacing:.06em}
+.tag.ok{background:var(--ok-bg);color:var(--ok-ink)}
+.tag.wait{background:var(--warn-bg);color:var(--warn-ink)}
+.fine{font:400 .78rem/1.5 var(--font-mono);color:var(--ink-soft);max-width:70ch}
+
+/* Gerai BBQ */
+.gerai-top{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:end;justify-content:space-between}
+.big{font:900 clamp(3rem,10vw,5rem)/.9 var(--font-display)}
+.stall-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+@media (max-width:640px){.stall-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.bbq{display:grid;grid-template-rows:1fr auto auto;justify-items:center;align-items:center;gap:2px;aspect-ratio:5/7;padding:10px 4px;border:2px solid var(--ink);border-radius:6px;background:var(--bbq);color:var(--on-bbq);cursor:pointer;text-align:center;min-width:0}
+.bbq .lt{font:900 2.6rem/1 var(--font-display)}
+.bbq .nm{font-weight:700;font-size:.8rem;line-height:1.15}
+.bbq .st{font:500 .65rem/1.2 var(--font-mono);text-transform:uppercase;letter-spacing:.08em;opacity:.9}
+.bbq[aria-pressed="true"]{background:transparent;color:var(--ink-soft);border-style:dashed}
+
+/* Situasi */
+.searchbox{position:relative;max-width:640px}
+.search{width:100%;min-height:54px;padding:0 54px 0 16px;border:2px solid var(--ink);background:var(--raise);border-radius:4px;font-size:1.05rem;font-weight:500}
+.search::placeholder{color:var(--ink-soft);opacity:1}
+.kbd{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:26px;height:26px;display:grid;place-items:center;border:1px solid var(--ink-soft);border-radius:4px;font:500 .8rem var(--font-mono);color:var(--ink-soft);pointer-events:none}
+.faq{display:grid}
+.faq details{border-top:2px solid var(--ink)}
+.faq details:last-of-type{border-bottom:2px solid var(--ink)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:16px 4px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:500 1.4rem/1 var(--font-mono);width:1.2ch;text-align:center}
+.faq details[open] summary::after{content:"\2212"}
+.faq summary:hover{background:var(--surface)}
+.ans{padding:0 4px 18px;max-width:62ch;color:var(--ink-soft)}
+.count{font:500 .8rem var(--font-mono);color:var(--ink-soft)}
+.empty{padding:20px;border:2px dashed var(--ink-soft);border-radius:6px;max-width:62ch}
+@media (max-width:520px){.faq summary{grid-template-columns:minmax(0,1fr) auto}.faq summary .tag{grid-column:1;grid-row:2}.faq summary::after{grid-column:2;grid-row:1}}
+
+/* Tentang */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:start}
+@media (max-width:860px){.about{grid-template-columns:minmax(0,1fr)}}
+.about .big2{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(2.2rem,6vw,3.4rem);line-height:.95}
+.dl{display:grid;gap:0}
+.dl div{display:grid;grid-template-columns:minmax(0,10rem) minmax(0,1fr);gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.dl div:last-child{border-bottom:1px solid var(--line)}
+.dl dt{font:500 .75rem/1.6 var(--font-mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.dl dd{font-weight:600}
+.foot{border-top:2px solid var(--ink);padding-block:28px}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+.foot a{font-weight:600}
+
+#embers{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#embers{display:none}}
+</style>
+
+<canvas id="embers" aria-hidden="true"></canvas>
+<a class="skip" href="#ringkasan">Langkau ke kandungan</a>
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#ringkasan" data-go="ringkasan">ROASTED<span>!</span></a>
+    <button class="theme" id="themeBtn" type="button">Gelap</button>
+    <nav class="nav" aria-label="Bahagian manual">
+      <a href="#ringkasan" data-go="ringkasan">Ringkasan</a>
+      <a href="#penyediaan" data-go="penyediaan">Penyediaan</a>
+      <a href="#giliran" data-go="giliran">Giliran</a>
+      <a href="#kad" data-go="kad">Kad</a>
+      <a href="#gerai" data-go="gerai">Gerai BBQ</a>
+      <a href="#situasi" data-go="situasi">Situasi</a>
+      <a href="#tentang" data-go="tentang">Tentang</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="ringkasan">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Teman di meja &middot; Permainan kad fizikal</p>
+      <h1>Jangan hangus.<br><em>Pilih BBQ!</em></h1>
+      <p class="lede">Rujukan pantas untuk ROASTED!, permainan kad penyingkiran untuk empat pemain. Jangan biarkan tangan awak lengkap dengan Oksigen, Haba dan Bahan Api. Pemain terakhir yang bertahan menang.</p>
+      <ul class="facts" aria-label="Fakta ringkas">
+        <li><b>4</b> pemain sahaja</li>
+        <li><b>56</b> kad</li>
+        <li>Manual <b>Draf 1.0</b></li>
+      </ul>
+      <div class="row">
+        <a class="btn hot" href="#penyediaan" data-go="penyediaan">Sediakan meja</a>
+        <a class="btn ghost" href="#situasi" data-go="situasi" data-focus="cari">Cari peraturan</a>
+      </div>
+    </div>
+
+    <div class="tri-wrap">
+      <div class="tri" id="tri">
+        <svg viewBox="0 0 100 92" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="fireGrad" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" style="stop-color:var(--f)"/>
+              <stop offset="1" style="stop-color:var(--h)"/>
+            </linearGradient>
+          </defs>
+          <polygon class="fill" points="50,12 12,76 88,76"/>
+          <line id="edge-oh" class="edge" x1="12" y1="76" x2="50" y2="12"/>
+          <line id="edge-hf" class="edge" x1="50" y1="12" x2="88" y2="76"/>
+          <line id="edge-of" class="edge" x1="12" y1="76" x2="88" y2="76"/>
+        </svg>
+        <div class="tri-c" id="triCount" aria-hidden="true">2/3</div>
+        <button class="node h" type="button" data-k="h" aria-pressed="true"><span class="ltr">H</span><span class="nm">Haba</span></button>
+        <button class="node o" type="button" data-k="o" aria-pressed="true"><span class="ltr">O</span><span class="nm">Oksigen</span></button>
+        <button class="node f" type="button" data-k="f" aria-pressed="false"><span class="ltr">F</span><span class="nm">Bahan Api</span></button>
+      </div>
+      <p class="tri-msg" id="triMsg" role="status" aria-live="polite">Dua unsur menyala. Kurang Bahan Api. Satu lagi dan awak terbakar.</p>
+      <div class="row"><button class="btn ghost small" id="triReset" type="button">Set semula</button></div>
+      <p class="tri-note">Ketuk unsur untuk menyala atau memadam. Dalam sains api, buang satu sisi dan api padam.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="emas">
+  <div class="wrap band-in">
+    <p class="eyebrow">Peraturan emas</p>
+    <h2 class="eq" id="emas"><span class="b o">O</span><span class="op">+</span><span class="b h">H</span><span class="op">+</span><span class="b f">F</span><span class="op">=</span><span class="boomword">Terbakar!</span></h2>
+    <p class="band-text">Lindungi diri segera. Atau awak tersingkir. Lebih banyak kad belum tentu lebih baik.</p>
+    <ul class="legend">
+      <li><span class="b o">O</span><div><b>Oksigen</b><span class="d">Oxygen &middot; udara yang menyuap api</span></div></li>
+      <li><span class="b h">H</span><div><b>Haba</b><span class="d">Heat &middot; tenaga yang menyalakan api</span></div></li>
+      <li><span class="b f">F</span><div><b>Bahan Api</b><span class="d">Fuel &middot; apa yang dibakar api</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="penyediaan">
+  <div class="wrap">
+    <div class="sh">
+      <p class="eyebrow">Sebelum permainan bermula</p>
+      <h2>Sediakan meja</h2>
+      <p class="sub">Tandakan setiap langkah semasa menyusun kad. Jumlah kad di sebelah kanan membantu awak memastikan tiada yang tertinggal.</p>
+    </div>
+
+    <div class="setup">
+      <div class="col">
+        <div class="meter-row"><span id="setupCount">0 / 7 siap</span><button class="chip" id="setupClear" type="button" style="min-height:32px;padding:0 10px">Kosongkan</button></div>
+        <div class="meter" role="progressbar" aria-label="Kemajuan penyediaan" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" id="setupBar"><i id="setupFill"></i></div>
+        <ol class="check" id="setupList">
+          <li><label for="st1"><input type="checkbox" id="st1"><span class="n">1</span><span class="t"><b>Pastikan ada empat pemain.</b> ROASTED! dimainkan oleh empat pemain sahaja.</span></label></li>
+          <li><label for="st2"><input type="checkbox" id="st2"><span class="n">2</span><span class="t"><b>Asingkan kad QR rujukan.</b> Simpan di luar permainan.</span></label></li>
+          <li><label for="st3"><input type="checkbox" id="st3"><span class="n">3</span><span class="t"><b>Susun Gerai BBQ</b> di sebelah dek utama: Ayam &times;2, Kambing &times;2, Daging Lembu &times;2. Semuanya dengan sisi MENTAH di atas.</span></label></li>
+          <li><label for="st4"><input type="checkbox" id="st4"><span class="n">4</span><span class="t"><b>Beri setiap pemain</b> 2 kad unsur dan 1 kad Fayar Cat I.</span></label></li>
+          <li><label for="st5"><input type="checkbox" id="st5"><span class="n">5</span><span class="t"><b>Sediakan dek utama 37 kad:</b> 34 unsur, 2 Kucing Hitam (Black Cat) dan 1 Magnet Kritikal (Critical Magnet).</span></label></li>
+          <li><label for="st6"><input type="checkbox" id="st6"><span class="n">6</span><span class="t"><b>Letakkan Magnet Kritikal</b> di dasar dek utama.</span></label></li>
+          <li><label for="st7"><input type="checkbox" id="st7"><span class="n">7</span><span class="t"><b>Letakkan dek utama di tengah meja</b> dan semak jumlah kad.</span></label></li>
+        </ol>
+        <p class="done-msg" id="setupDone" hidden>Meja siap. Selamat bermain!</p>
+      </div>
+
+      <div class="col">
+        <div class="board" role="img" aria-label="Susunan meja: empat pemain mengelilingi dek utama dan Gerai BBQ">
+          <div class="seat s1"><b>Pemain 1</b><small>2 unsur + Fayar Cat I</small></div>
+          <div class="seat s2"><b>Pemain 2</b><small>2 unsur + Fayar Cat I</small></div>
+          <div class="seat s3"><b>Pemain 3</b><small>2 unsur + Fayar Cat I</small></div>
+          <div class="seat s4"><b>Pemain 4</b><small>2 unsur + Fayar Cat I</small></div>
+          <div class="mid">
+            <div class="deck"><b>37</b><small>Dek utama<br>Magnet di dasar</small></div>
+            <div class="stall">
+              <div class="mini"><i>A</i><i>A</i><i>K</i><i>K</i><i>D</i><i>D</i></div>
+              <small>Gerai BBQ &middot; sisi mentah di atas</small>
+            </div>
+          </div>
+        </div>
+        <p class="fine">A = Ayam, K = Kambing, D = Daging Lembu. Susunan ini ialah rajah rujukan.</p>
+
+        <div class="tbl-scroll">
+          <table class="ledger">
+            <caption class="eyebrow" style="text-align:left;padding-bottom:8px">Semak jumlah kad</caption>
+            <tbody>
+              <tr><th scope="row">Dek utama</th><td>37</td></tr>
+              <tr><th scope="row">Kad permulaan pemain (4 &times; 3)</th><td>12</td></tr>
+              <tr><th scope="row">Gerai BBQ</th><td>6</td></tr>
+              <tr class="tot"><th scope="row">Kad permainan</th><td>55</td></tr>
+              <tr><th scope="row">Kad QR rujukan</th><td>1</td></tr>
+              <tr class="tot"><th scope="row">Jumlah dalam set</th><td>56</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="giliran">
+  <div class="wrap">
+    <div class="sh">
+      <p class="eyebrow">Semasa bermain</p>
+      <h2>Tarik. Semak. Putuskan.</h2>
+      <p class="sub">Setiap giliran ada tiga langkah. Gunakan alat di bawah untuk menjejak giliran, menyemak tangan dan melihat siapa masih bertahan.</p>
+    </div>
+
+    <div class="panels">
+      <div class="panel">
+        <h3>Satu giliran</h3>
+        <ol class="turn" id="turn">
+          <li data-state="now"><span class="num">1</span><div><b>Tarik kad</b><span class="d">Tarik satu kad.</span></div></li>
+          <li data-state="next"><span class="num">2</span><div><b>Selesaikan kesan segera</b><span class="d">Selesaikan semua kesan segera.</span></div></li>
+          <li data-state="next"><span class="num">3</span><div><b>Lengkapkan tindakan</b><span class="d">Lengkapkan tindakan awak.</span></div></li>
+        </ol>
+        <p class="status" id="turnMsg" role="status" aria-live="polite">Sekarang: tarik kad.</p>
+        <div class="row"><button class="btn" id="turnNext" type="button">Langkah 1 siap</button></div>
+      </div>
+
+      <div class="panel" id="hand">
+        <h3>Semak tangan</h3>
+        <p class="hint">Masukkan unsur dalam tangan awak.</p>
+        <ul class="hand">
+          <li><span class="b o" style="background:var(--o)">O</span><b>Oksigen</b><div class="stepper"><button type="button" data-hand="o" data-d="-1" id="hm-o" aria-label="Kurangkan Oksigen">&minus;</button><output id="hc-o" aria-live="off">1</output><button type="button" data-hand="o" data-d="1" id="hp-o" aria-label="Tambah Oksigen">+</button></div></li>
+          <li><span class="b h" style="background:var(--h)">H</span><b>Haba</b><div class="stepper"><button type="button" data-hand="h" data-d="-1" id="hm-h" aria-label="Kurangkan Haba">&minus;</button><output id="hc-h" aria-live="off">1</output><button type="button" data-hand="h" data-d="1" id="hp-h" aria-label="Tambah Haba">+</button></div></li>
+          <li><span class="b f" style="background:var(--f)">F</span><b>Bahan Api</b><div class="stepper"><button type="button" data-hand="f" data-d="-1" id="hm-f" aria-label="Kurangkan Bahan Api">&minus;</button><output id="hc-f" aria-live="off">0</output><button type="button" data-hand="f" data-d="1" id="hp-f" aria-label="Tambah Bahan Api">+</button></div></li>
+        </ul>
+        <p class="verdict warn" id="handVerdict" role="status" aria-live="polite">Hampir. Kurang Bahan Api. Satu kad itu melengkapkan segi tiga.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Siapa masih bertahan?</h3>
+        <ul class="players" id="players">
+          <li id="pl0"><input id="pn0" type="text" value="Pemain 1" maxlength="16" aria-label="Nama pemain 1"><button class="chip" id="plb0" type="button" aria-pressed="false" data-p="0">Tersingkir</button></li>
+          <li id="pl1"><input id="pn1" type="text" value="Pemain 2" maxlength="16" aria-label="Nama pemain 2"><button class="chip" id="plb1" type="button" aria-pressed="false" data-p="1">Tersingkir</button></li>
+          <li id="pl2"><input id="pn2" type="text" value="Pemain 3" maxlength="16" aria-label="Nama pemain 3"><button class="chip" id="plb2" type="button" aria-pressed="false" data-p="2">Tersingkir</button></li>
+          <li id="pl3"><input id="pn3" type="text" value="Pemain 4" maxlength="16" aria-label="Nama pemain 4"><button class="chip" id="plb3" type="button" aria-pressed="false" data-p="3">Tersingkir</button></li>
+        </ul>
+        <p class="status" id="aliveCount" role="status" aria-live="polite">Bertahan: 4 / 4</p>
+        <p class="winner" id="winner" hidden></p>
+        <div class="row"><button class="btn ghost small" id="playersReset" type="button">Set semula pemain</button></div>
+      </div>
+    </div>
+
+    <div class="copy-wrap">
+      <div class="row">
+        <button class="btn ghost" id="copyBtn" type="button">Salin ringkasan peraturan</button>
+        <span class="count" id="copyMsg" role="status" aria-live="polite"></span>
+      </div>
+      <textarea class="copy-out" id="copyOut" readonly hidden aria-label="Ringkasan peraturan"></textarea>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="kad">
+  <div class="wrap">
+    <div class="sh">
+      <p class="eyebrow">Kenali tangan awak</p>
+      <h2>Dek kecil, masalah besar</h2>
+      <p class="sub">55 kad permainan dan 1 kad rujukan. Nama Inggeris ditunjukkan supaya mudah dipadankan dengan kad di tangan.</p>
+    </div>
+
+    <div class="row" role="group" aria-label="Tapis kad">
+      <button class="chip" type="button" data-cardfilter="all" aria-pressed="true">Semua</button>
+      <button class="chip" type="button" data-cardfilter="unsur" aria-pressed="false">Unsur</button>
+      <button class="chip" type="button" data-cardfilter="khas" aria-pressed="false">Khas</button>
+      <button class="chip" type="button" data-cardfilter="bbq" aria-pressed="false">BBQ</button>
+      <button class="chip" type="button" data-cardfilter="rujukan" aria-pressed="false">Rujukan</button>
+    </div>
+
+    <div class="cards">
+      <article class="kcard c-o" data-g="unsur"><div class="face">O</div><div class="info"><h3>Oksigen</h3><span class="en">Oxygen</span><p>Satu daripada tiga sisi Segi Tiga Api.</p><span class="qty">Antara 34 kad unsur dalam dek utama</span></div></article>
+      <article class="kcard c-h" data-g="unsur"><div class="face">H</div><div class="info"><h3>Haba</h3><span class="en">Heat</span><p>Satu daripada tiga sisi Segi Tiga Api.</p><span class="qty">Antara 34 kad unsur dalam dek utama</span></div></article>
+      <article class="kcard c-f" data-g="unsur"><div class="face">F</div><div class="info"><h3>Bahan Api</h3><span class="en">Fuel</span><p>Satu daripada tiga sisi Segi Tiga Api.</p><span class="qty">Antara 34 kad unsur dalam dek utama</span></div></article>
+
+      <article class="kcard c-x" data-g="khas"><div class="face">I/II</div><div class="info"><h3>Fayar Cat I / II</h3><span class="en">Depan: Fayar Cat I &middot; Belakang: Fayar Cat II</span><p>Satu kad dua muka untuk meneutralkan kad O, H dan F. Boleh digunakan sebanyak 2 kali. Setiap pemain mulakan dengannya bersama 2 kad unsur.</p><span class="qty">1 setiap pemain &middot; 4 kad</span><span class="tag ok">Jelas</span></div></article>
+      <article class="kcard c-x" data-g="khas"><div class="face">K</div><div class="info"><h3>Kucing Hitam</h3><span class="en">Black Cat</span><p>Berfungsi untuk mencuri kad BBQ.</p><span class="qty">2 kad dalam dek utama</span><span class="tag wait">Penerangan penuh menyusul</span></div></article>
+      <article class="kcard c-x" data-g="khas"><div class="face">M</div><div class="info"><h3>Magnet Kritikal</h3><span class="en">Critical Magnet</span><p>Kad khas yang diletakkan di dasar dek utama.</p><span class="qty">1 kad &middot; dasar dek utama</span><span class="tag wait">Butiran kesan menyusul</span></div></article>
+
+      <article class="kcard c-b" data-g="bbq"><div class="face">A<small>Mentah</small></div><div class="info"><h3>BBQ Ayam</h3><span class="en">Chicken</span><p>Ditukar dengan tiga kad unsur yang sama (O, H atau F). Fungsinya sama dengan BBQ lain.</p><span class="qty">2 kad &middot; Gerai BBQ</span><span class="tag ok">Jelas</span></div></article>
+      <article class="kcard c-b" data-g="bbq"><div class="face">K<small>Mentah</small></div><div class="info"><h3>BBQ Kambing</h3><span class="en">Lamb</span><p>Ditukar dengan tiga kad unsur yang sama (O, H atau F). Fungsinya sama dengan BBQ lain.</p><span class="qty">2 kad &middot; Gerai BBQ</span><span class="tag ok">Jelas</span></div></article>
+      <article class="kcard c-b" data-g="bbq"><div class="face">D<small>Mentah</small></div><div class="info"><h3>BBQ Daging Lembu</h3><span class="en">Beef</span><p>Ditukar dengan tiga kad unsur yang sama (O, H atau F). Fungsinya sama dengan BBQ lain.</p><span class="qty">2 kad &middot; Gerai BBQ</span><span class="tag ok">Jelas</span></div></article>
+
+      <article class="kcard c-q" data-g="rujukan"><div class="face">QR</div><div class="info"><h3>Kad QR rujukan</h3><span class="en">Reference card</span><p>Simpan di luar permainan.</p><span class="qty">1 kad</span><span class="tag ok">Jelas</span></div></article>
+    </div>
+    <p class="fine">Rupa kad di sini ialah penanda rujukan, bukan seni kad rasmi.</p>
+  </div>
+</section>
+
+<section class="sec" id="gerai">
+  <div class="wrap">
+    <div class="sh">
+      <p class="eyebrow">Selamat datang ke Gerai BBQ</p>
+      <h2>Pilihan awak, perlindungan sama</h2>
+      <p class="sub">Tukar tiga kad unsur yang sama, iaitu O,O,O atau H,H,H atau F,F,F, dengan satu BBQ yang masih ada di gerai. Ayam, Kambing atau Daging Lembu: awak yang pilih, fungsinya sama. Gerai ialah bekalan berasingan di sebelah dek utama, dan keenam-enam kad bermula dengan sisi MENTAH di atas.</p>
+    </div>
+
+    <div class="gerai-top">
+      <div>
+        <p class="eyebrow">Baki di gerai</p>
+        <p class="big" id="bbqLeft">6 / 6</p>
+      </div>
+      <div style="display:grid;gap:8px;max-width:40ch">
+        <p class="status" id="bbqMsg" role="status" aria-live="polite">Ada 6 BBQ untuk ditukar.</p>
+        <p class="count" id="bbqDetail">Ayam 2 &middot; Kambing 2 &middot; Daging Lembu 2</p>
+        <div class="row"><button class="btn ghost small" id="bbqReset" type="button">Isi semula gerai</button></div>
+      </div>
+    </div>
+
+    <div class="stall-grid" id="stallGrid">
+      <button class="bbq" type="button" data-t="a" aria-pressed="false"><span class="lt">A</span><span class="nm">Ayam</span><span class="st">Mentah</span></button>
+      <button class="bbq" type="button" data-t="a" aria-pressed="false"><span class="lt">A</span><span class="nm">Ayam</span><span class="st">Mentah</span></button>
+      <button class="bbq" type="button" data-t="k" aria-pressed="false"><span class="lt">K</span><span class="nm">Kambing</span><span class="st">Mentah</span></button>
+      <button class="bbq" type="button" data-t="k" aria-pressed="false"><span class="lt">K</span><span class="nm">Kambing</span><span class="st">Mentah</span></button>
+      <button class="bbq" type="button" data-t="d" aria-pressed="false"><span class="lt">D</span><span class="nm">Daging Lembu</span><span class="st">Mentah</span></button>
+      <button class="bbq" type="button" data-t="d" aria-pressed="false"><span class="lt">D</span><span class="nm">Daging Lembu</span><span class="st">Mentah</span></button>
+    </div>
+    <p class="fine">Ketuk kad apabila ia ditukar untuk menjejak baki gerai. Ketuk sekali lagi untuk mengembalikannya.</p>
+  </div>
+</section>
+
+<section class="sec" id="situasi">
+  <div class="wrap">
+    <div class="sh">
+      <p class="eyebrow">Selesaikan di meja</p>
+      <h2>Apa jadi jika&hellip;?</h2>
+      <p class="sub">Taip kata kunci seperti "BBQ", "tersingkir" atau "Kucing Hitam". Ini Draf 1.0, jadi situasi yang belum dinyatakan ditanda sebagai menunggu penjelasan.</p>
+    </div>
+
+    <div class="searchbox">
+      <input class="search" id="cari" type="search" placeholder="Cari peraturan" aria-label="Cari peraturan" autocomplete="off">
+      <span class="kbd" aria-hidden="true">/</span>
+    </div>
+    <div class="row" role="group" aria-label="Tapis mengikut status">
+      <button class="chip" type="button" data-faqfilter="all" aria-pressed="true">Semua</button>
+      <button class="chip" type="button" data-faqfilter="ok" aria-pressed="false">Jelas</button>
+      <button class="chip" type="button" data-faqfilter="wait" aria-pressed="false">Menunggu penjelasan</button>
+      <span class="count" id="faqCount" role="status" aria-live="polite">Menunjukkan 14 daripada 14</span>
+    </div>
+
+    <div class="faq" id="faq">
+      <details data-s="ok"><summary><span>Berapa orang boleh bermain?</span><span class="tag ok">Jelas</span></summary><p class="ans">Empat pemain sahaja.</p></details>
+      <details data-s="ok"><summary><span>Bagaimana saya menang?</span><span class="tag ok">Jelas</span></summary><p class="ans">Jadi pemain terakhir yang bertahan. Semua pemain lain mesti sudah tersingkir.</p></details>
+      <details data-s="ok"><summary><span>Tangan saya ada Oksigen, Haba dan Bahan Api. Apa jadi?</span><span class="tag ok">Jelas</span></summary><p class="ans">Segi Tiga Api lengkap dan awak terbakar. Lindungi diri segera, atau awak tersingkir.</p></details>
+      <details data-s="ok"><summary><span>Apa yang saya buat pada giliran saya?</span><span class="tag ok">Jelas</span></summary><p class="ans">Tarik satu kad, selesaikan kesan segera, kemudian lengkapkan tindakan awak.</p></details>
+      <details data-s="ok"><summary><span>Bagaimana menukar unsur dengan BBQ?</span><span class="tag ok">Jelas</span></summary><p class="ans">Serahkan tiga kad unsur yang sama (O,O,O, H,H,H atau F,F,F) dan ambil satu BBQ yang masih ada di Gerai BBQ. Awak boleh pilih mana-mana BBQ yang tersedia.</p></details>
+      <details data-s="ok"><summary><span>Adakah BBQ Ayam, Kambing dan Daging Lembu berbeza?</span><span class="tag ok">Jelas</span></summary><p class="ans">Tidak. Awak boleh pilih mana-mana, dan setiap jenis mempunyai fungsi permainan yang sama.</p></details>
+      <details data-s="ok"><summary><span>Di mana Gerai BBQ dan bagaimana ia bermula?</span><span class="tag ok">Jelas</span></summary><p class="ans">Ia bekalan berasingan di sebelah dek utama. Enam kad semuanya bermula dengan sisi MENTAH di atas.</p></details>
+      <details data-s="ok"><summary><span>Berapa kad dalam dek utama, dan di mana Magnet Kritikal?</span><span class="tag ok">Jelas</span></summary><p class="ans">37 kad: 34 unsur, 2 Kucing Hitam dan 1 Magnet Kritikal. Magnet Kritikal berada di dasar dek.</p></details>
+      <details data-s="ok"><summary><span>Apa yang setiap pemain ada pada permulaan?</span><span class="tag ok">Jelas</span></summary><p class="ans">2 kad unsur dan 1 kad Fayar Cat I.</p></details>
+      <details data-s="ok"><summary><span>Apa nak buat dengan kad QR?</span><span class="tag ok">Jelas</span></summary><p class="ans">Ia kad rujukan. Simpan di luar permainan.</p></details>
+      <details data-s="wait"><summary><span>Apa yang Kucing Hitam (Black Cat) lakukan?</span><span class="tag wait">Menunggu</span></summary><p class="ans">Kad ini berfungsi untuk mencuri kad BBQ. Penerangan penuh tentang cara menggunakannya belum dimasukkan dalam halaman ini. Rujuk pereka sehingga ia dilengkapkan.</p></details>
+      <details data-s="wait"><summary><span>Apa kesan Magnet Kritikal (Critical Magnet)?</span><span class="tag wait">Menunggu</span></summary><p class="ans">Butiran kesan kad ini belum dimasukkan dalam halaman ini. Rujuk pereka sehingga ia dilengkapkan.</p></details>
+      <details data-s="ok"><summary><span>Apa fungsi Fayar Cat I dan Fayar Cat II?</span><span class="tag ok">Jelas</span></summary><p class="ans">Kad Fayar Cat meneutralkan kad O, H dan F. Ia satu kad dua muka: bahagian depan tertulis Fayar Cat I dan bahagian belakang tertulis Fayar Cat II. Ia boleh digunakan sebanyak 2 kali.</p></details>
+      <details data-s="wait"><summary><span>Bagaimana jika situasi saya tiada dalam senarai?</span><span class="tag wait">Menunggu</span></summary><p class="ans">Penjelasan peraturan menunggu keputusan pereka. Ini Draf 1.0, dan situasi yang belum dinyatakan kekal menunggu penjelasan.</p></details>
+    </div>
+    <div class="empty" id="faqEmpty" hidden>
+      <b>Tiada padanan.</b> Cuba kata kunci lain, atau kosongkan carian. Jika situasi awak memang tiada dalam senarai, penjelasan peraturan menunggu keputusan pereka.
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="tentang">
+  <div class="wrap about">
+    <div class="sh">
+      <p class="eyebrow">Dibuat di Malaysia</p>
+      <p class="big2">Sedikit api. Banyak perwatakan.</p>
+      <p class="sub">ROASTED! ialah permainan kad fizikal bertanding secara penyingkiran. Ia meneroka Oksigen, Haba dan Bahan Api melalui keputusan strategik, daya tahan dan interaksi bertema BBQ yang sukar diramal.</p>
+      <p class="sub">Manual ini teman di meja, bukan permainan dalam talian.</p>
+    </div>
+    <dl class="dl">
+      <div><dt>Pereka dan pencipta</dt><dd>Fizaril Amzari bin Omar (SeAm)</dd></div>
+      <div><dt>Versi manual</dt><dd>Draf 1.0</dd></div>
+      <div><dt>Manual asal dikemas kini</dt><dd>23 Oktober 2026</dd></div>
+      <div><dt>Edisi Bahasa Melayu</dt><dd>24 Oktober 2026</dd></div>
+      <div><dt>Edisi dan penerbitan</dt><dd>Akan diumumkan</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>ROASTED! &middot; Jangan hangus. Pilih BBQ sebaliknya!</span>
+    <a href="#ringkasan" data-go="ringkasan">Kembali ke atas</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+var reduce=false;
+try{reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
+var root=document.documentElement;
+
+/* Tinggi header untuk jarak tatal */
+var headEl=$('#top');
+function setHead(){root.style.setProperty('--head',headEl.offsetHeight+'px')}
+setHead();
+window.addEventListener('resize',setHead);
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(setHead)}
+
+/* Navigasi */
+function go(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  el.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+}
+$$('[data-go]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    go(a.getAttribute('data-go'));
+    var fid=a.getAttribute('data-focus');
+    if(fid){
+      setTimeout(function(){var f=document.getElementById(fid);if(f)f.focus({preventScroll:true})},reduce?0:500);
+    }
+  });
+});
+var links={};
+$$('.nav a').forEach(function(a){links[a.getAttribute('data-go')]=a});
+var nav=$('.nav');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting)return;
+      Object.keys(links).forEach(function(k){links[k].removeAttribute('aria-current')});
+      var l=links[en.target.id];
+      if(l){
+        l.setAttribute('aria-current','true');
+        if(nav.scrollWidth>nav.clientWidth){nav.scrollLeft=Math.max(0,l.offsetLeft-24)}
+      }
+    });
+  },{rootMargin:'-25% 0px -65% 0px'});
+  Object.keys(links).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)});
+}
+if(location.hash&&location.hash.length>1){
+  var hid=location.hash.slice(1);
+  setTimeout(function(){go(hid)},80);
+}
+
+/* Tema */
+var tb=$('#themeBtn');
+function isDark(){
+  var t=root.getAttribute('data-theme');
+  if(t)return t==='dark';
+  try{return window.matchMedia('(prefers-color-scheme: dark)').matches}catch(e){return false}
+}
+function syncTheme(){
+  tb.textContent=isDark()?'Cerah':'Gelap';
+  tb.setAttribute('aria-label',isDark()?'Tukar ke tema cerah':'Tukar ke tema gelap');
+}
+tb.addEventListener('click',function(){
+  root.setAttribute('data-theme',isDark()?'light':'dark');
+  syncTheme();
+});
+syncTheme();
+
+/* Segi tiga api */
+var names={o:'Oksigen',h:'Haba',f:'Bahan Api'};
+var tri=$('#tri');
+var nodes=$$('.node',tri);
+var tstate={o:true,h:true,f:false};
+function renderTri(){
+  var n=0,missing=[];
+  ['o','h','f'].forEach(function(k){if(tstate[k]){n++}else{missing.push(names[k])}});
+  nodes.forEach(function(b){b.setAttribute('aria-pressed',tstate[b.getAttribute('data-k')]?'true':'false')});
+  var edges={oh:tstate.o&&tstate.h,hf:tstate.h&&tstate.f,of:tstate.o&&tstate.f};
+  Object.keys(edges).forEach(function(k){
+    var e=document.getElementById('edge-'+k);
+    if(e)e.classList.toggle('on',!!edges[k]);
+  });
+  var boom=n===3;
+  var was=tri.classList.contains('boom');
+  tri.classList.toggle('boom',boom);
+  if(boom&&!was&&!reduce){tri.classList.remove('jolt');void tri.offsetWidth;tri.classList.add('jolt')}
+  if(!boom)tri.classList.remove('jolt');
+  $('#triCount').textContent=boom?'Terbakar!':n+'/3';
+  var msg;
+  if(n===0)msg='Tiada unsur menyala. Ketuk satu untuk bermula.';
+  else if(n===1)msg='Satu unsur menyala. Api belum terbentuk.';
+  else if(n===2)msg='Dua unsur menyala. Kurang '+missing[0]+'. Satu lagi dan awak terbakar.';
+  else msg='Segi Tiga Api lengkap. Lindungi diri segera, atau awak tersingkir.';
+  var m=$('#triMsg');
+  m.textContent=msg;
+  m.classList.toggle('danger',boom);
+}
+nodes.forEach(function(b){
+  b.addEventListener('click',function(){
+    var k=b.getAttribute('data-k');
+    tstate[k]=!tstate[k];
+    renderTri();
+  });
+});
+$('#triReset').addEventListener('click',function(){
+  tstate={o:true,h:true,f:false};
+  renderTri();
+});
+renderTri();
+
+/* Senarai semak penyediaan */
+var checks=$$('#setupList input');
+function renderSetup(){
+  var n=checks.filter(function(c){return c.checked}).length;
+  $('#setupFill').style.width=(n/7*100)+'%';
+  $('#setupCount').textContent=n+' / 7 siap';
+  $('#setupBar').setAttribute('aria-valuenow',String(n));
+  $('#setupDone').hidden=n!==7;
+}
+checks.forEach(function(c){c.addEventListener('change',renderSetup)});
+$('#setupClear').addEventListener('click',function(){
+  checks.forEach(function(c){c.checked=false});
+  renderSetup();
+});
+renderSetup();
+
+/* Langkah giliran */
+var tsteps=$$('#turn li');
+var stepNames=['tarik kad','selesaikan kesan segera','lengkapkan tindakan'];
+var tcur=0;
+function renderTurn(){
+  tsteps.forEach(function(li,i){
+    li.setAttribute('data-state',i<tcur?'done':(i===tcur?'now':'next'));
+  });
+  var btn=$('#turnNext'),msg=$('#turnMsg');
+  if(tcur>=3){
+    btn.textContent='Mula giliran baharu';
+    msg.textContent='Giliran selesai.';
+  }else{
+    btn.textContent='Langkah '+(tcur+1)+' siap';
+    msg.textContent='Sekarang: '+stepNames[tcur]+'.';
+  }
+}
+$('#turnNext').addEventListener('click',function(){
+  tcur=tcur>=3?0:tcur+1;
+  renderTurn();
+});
+renderTurn();
+
+/* Semak tangan */
+var hand={o:1,h:1,f:0};
+var keys=['o','h','f'];
+function renderHand(){
+  var miss=[];
+  keys.forEach(function(k){
+    $('#hc-'+k).textContent=String(hand[k]);
+    $('#hm-'+k).disabled=hand[k]<=0;
+    $('#hp-'+k).disabled=hand[k]>=9;
+    if(hand[k]===0)miss.push(names[k]);
+  });
+  var v=$('#handVerdict'),cls,t;
+  if(miss.length===0){cls='danger';t='Terbakar. Tangan awak ada Oksigen, Haba dan Bahan Api. Lindungi diri segera, atau awak tersingkir.'}
+  else if(miss.length===1){cls='warn';t='Hampir. Kurang '+miss[0]+'. Satu kad itu melengkapkan segi tiga.'}
+  else if(miss.length===2){cls='safe';t='Selamat buat masa ini. Kurang '+miss[0]+' dan '+miss[1]+'.'}
+  else{cls='safe';t='Tiada unsur dalam tangan.'}
+  var tr=[];
+  keys.forEach(function(k){if(hand[k]>=3)tr.push(names[k])});
+  if(tr.length)t+=' Tiga kad '+tr.join(' dan ')+' yang sama boleh ditukar dengan satu BBQ.';
+  v.textContent=t;
+  v.className='verdict '+cls;
+}
+$('#hand').addEventListener('click',function(e){
+  var b=e.target.closest?e.target.closest('button[data-hand]'):null;
+  if(!b||b.disabled)return;
+  var k=b.getAttribute('data-hand');
+  var d=parseInt(b.getAttribute('data-d'),10);
+  hand[k]=Math.max(0,Math.min(9,hand[k]+d));
+  renderHand();
+});
+renderHand();
+
+/* Penjejak pemain */
+var alive=[true,true,true,true];
+function renderPlayers(){
+  var n=0,last=-1;
+  alive.forEach(function(a,i){
+    $('#pl'+i).classList.toggle('out',!a);
+    $('#plb'+i).setAttribute('aria-pressed',a?'false':'true');
+    if(a){n++;last=i}
+  });
+  $('#aliveCount').textContent='Bertahan: '+n+' / 4';
+  var w=$('#winner');
+  if(n===1){
+    var nm=($('#pn'+last).value||'').trim()||('Pemain '+(last+1));
+    w.hidden=false;
+    w.textContent='Pemenang: '+nm+'. Pemain terakhir yang bertahan.';
+  }else if(n===0){
+    w.hidden=false;
+    w.textContent='Tiada pemain tinggal. Kembalikan seorang pemain untuk menyemak semula.';
+  }else{
+    w.hidden=true;
+  }
+}
+$$('#players button[data-p]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var i=parseInt(b.getAttribute('data-p'),10);
+    alive[i]=!alive[i];
+    renderPlayers();
+  });
+});
+$$('#players input').forEach(function(inp){inp.addEventListener('input',renderPlayers)});
+$('#playersReset').addEventListener('click',function(){
+  alive=[true,true,true,true];
+  renderPlayers();
+});
+renderPlayers();
+
+/* Salin ringkasan */
+var summary=[
+  'ROASTED! Ringkasan pantas (Draf 1.0)',
+  '4 pemain, 56 kad. Pemain terakhir yang bertahan menang.',
+  'Peraturan emas: Oksigen + Haba + Bahan Api = Terbakar. Lindungi diri segera, atau tersingkir.',
+  'Giliran: 1) Tarik kad 2) Selesaikan kesan segera 3) Lengkapkan tindakan.',
+  'Gerai BBQ: tukar tiga kad unsur yang sama (O,O,O / H,H,H / F,F,F) dengan satu BBQ yang masih ada (Ayam, Kambing atau Daging Lembu, pilihan pemain, fungsi sama).',
+  'Kad khas: Fayar Cat (depan I, belakang II) meneutralkan kad O, H atau F dan boleh digunakan 2 kali. Kucing Hitam digunakan untuk mencuri kad BBQ.',
+  'Penyediaan: dek utama 37 kad (34 unsur, 2 Kucing Hitam, 1 Magnet Kritikal di dasar); setiap pemain 2 unsur + Fayar Cat I; Gerai BBQ 6 kad sisi MENTAH di atas; kad QR di luar permainan.'
+].join('\n');
+$('#copyBtn').addEventListener('click',function(){
+  var out=$('#copyOut'),msg=$('#copyMsg');
+  function manual(){
+    out.hidden=false;
+    out.value=summary;
+    out.focus();
+    out.select();
+    msg.textContent='Salin secara manual: teks sudah dipilih.';
+  }
+  try{
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(summary).then(function(){
+        out.hidden=true;
+        msg.textContent='Ringkasan disalin.';
+      },manual);
+    }else{manual()}
+  }catch(e){manual()}
+});
+
+/* Tapis kad */
+var cardChips=$$('[data-cardfilter]');
+cardChips.forEach(function(c){
+  c.addEventListener('click',function(){
+    cardChips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});
+    var f=c.getAttribute('data-cardfilter');
+    $$('.kcard').forEach(function(k){k.hidden=!(f==='all'||k.getAttribute('data-g')===f)});
+  });
+});
+
+/* Gerai BBQ */
+var bbq=$$('.bbq');
+function renderBbq(){
+  var left=0,per={a:0,k:0,d:0};
+  bbq.forEach(function(b){
+    var taken=b.getAttribute('aria-pressed')==='true';
+    b.querySelector('.st').textContent=taken?'Sudah ditukar':'Mentah';
+    if(!taken){left++;per[b.getAttribute('data-t')]++}
+  });
+  $('#bbqLeft').textContent=left+' / 6';
+  $('#bbqDetail').textContent='Ayam '+per.a+' · Kambing '+per.k+' · Daging Lembu '+per.d;
+  $('#bbqMsg').textContent=left===0?'Gerai kosong. Tiada BBQ untuk ditukar.':'Ada '+left+' BBQ untuk ditukar.';
+}
+bbq.forEach(function(b){
+  b.addEventListener('click',function(){
+    b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');
+    renderBbq();
+  });
+});
+$('#bbqReset').addEventListener('click',function(){
+  bbq.forEach(function(b){b.setAttribute('aria-pressed','false')});
+  renderBbq();
+});
+renderBbq();
+
+/* Carian situasi */
+var q=$('#cari');
+var faqItems=$$('#faq details');
+var fchips=$$('[data-faqfilter]');
+var fstat='all';
+function filterFaq(){
+  var term=q.value.trim().toLowerCase(),shown=0;
+  faqItems.forEach(function(d){
+    var okS=fstat==='all'||d.getAttribute('data-s')===fstat;
+    var okT=!term||d.textContent.toLowerCase().indexOf(term)!==-1;
+    var show=okS&&okT;
+    d.hidden=!show;
+    if(show)shown++;
+  });
+  $('#faqCount').textContent='Menunjukkan '+shown+' daripada '+faqItems.length;
+  $('#faqEmpty').hidden=shown!==0;
+}
+q.addEventListener('input',filterFaq);
+q.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){q.value='';filterFaq()}
+});
+fchips.forEach(function(c){
+  c.addEventListener('click',function(){
+    fstat=c.getAttribute('data-faqfilter');
+    fchips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});
+    filterFaq();
+  });
+});
+document.addEventListener('keydown',function(e){
+  var t=e.target,tag=t&&t.tagName?t.tagName.toLowerCase():'';
+  if(e.key==='/'&&tag!=='input'&&tag!=='textarea'&&!e.metaKey&&!e.ctrlKey&&!e.altKey){
+    e.preventDefault();
+    go('situasi');
+    setTimeout(function(){q.focus({preventScroll:true})},reduce?0:400);
+  }
+});
+filterFaq();
+
+/* Bara api di latar: zarah perlahan naik dari bawah skrin */
+(function(){
+  var cv=document.getElementById('embers');
+  if(!cv||reduce||!cv.getContext)return;
+  var ctx=cv.getContext('2d'),W=0,H=0,dpr=1,ps=[],raf=0,last=0,lw=window.innerWidth;
+  function size(){
+    dpr=Math.min(window.devicePixelRatio||1,2);
+    W=window.innerWidth;H=window.innerHeight;
+    cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  function colours(){
+    var cs=getComputedStyle(root);
+    return [cs.getPropertyValue('--h').trim()||'#FF7A4D',cs.getPropertyValue('--f').trim()||'#F4B942'];
+  }
+  var cols=colours();
+  function spawn(p,initial){
+    p.x=Math.random()*W;
+    p.y=initial?Math.random()*H:H+10+Math.random()*40;
+    p.r=1+Math.random()*2.4;
+    p.vy=18+Math.random()*34;
+    p.ph=Math.random()*6.28;
+    p.sw=6+Math.random()*14;
+    p.a=.18+Math.random()*.25;
+    p.c=cols[Math.random()<.65?0:1];
+    return p;
+  }
+  function init(){
+    size();
+    cols=colours();
+    ps=[];
+    var n=Math.max(14,Math.min(34,Math.round(W/38)));
+    for(var i=0;i<n;i++)ps.push(spawn({},true));
+  }
+  function frame(t){
+    raf=requestAnimationFrame(frame);
+    var dt=Math.min(.05,((t-last)/1000)||.016);
+    last=t;
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<ps.length;i++){
+      var p=ps[i];
+      p.y-=p.vy*dt;
+      p.ph+=dt*1.2;
+      if(p.y<-10){spawn(p,false);continue}
+      var f=Math.max(0,Math.min(1,p.y/H));
+      ctx.globalAlpha=p.a*(0.35+0.65*f);
+      ctx.fillStyle=p.c;
+      ctx.beginPath();
+      ctx.arc(p.x+Math.sin(p.ph)*p.sw,p.y,p.r,0,6.2832);
+      ctx.fill();
+    }
+    ctx.globalAlpha=1;
+  }
+  function start(){if(!raf){last=performance.now();raf=requestAnimationFrame(frame)}}
+  function stop(){if(raf){cancelAnimationFrame(raf);raf=0}}
+  init();
+  start();
+  window.addEventListener('resize',function(){
+    if(window.innerWidth!==lw){lw=window.innerWidth;init()}else{size()}
+  });
+  document.addEventListener('visibilitychange',function(){if(document.hidden){stop()}else{start()}});
+})();
+})();
+</script>
+
+</body></html>
